@@ -1,25 +1,46 @@
 <template>
-  <div class="search">
+  <div class="Search">
     <h1>{{ msg }}</h1>
 
-    <iframe
-      width="600"
-      height="450"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAlnE5uigVpDUkIlBcLVd9glDW67JYdktc
-        &q=Space+Needle,Seattle+WA" allowfullscreen>
-    </iframe>
+    <gmap-map
+        :center="center"
+        :zoom="7"
+        style="width: 500px; height: 300px"
+      >
+        <gmap-marker
+          v-for="m in markers"
+          :position="m.position"
+          :clickable="true"
+          :draggable="true"
+          @click="center=m.position"
+        ></gmap-marker>
+      </gmap-map>
 
-
-  </div>
+      </div>
 </template>
 
 <script>
+import * as VueGoogleMaps from 'vue2-google-maps'
+import Vue from 'vue'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyBPq2g_BDqHWgQi4aBW240pQ_rT6RE0b4Q',
+    v: 'OPTIONAL VERSION NUMBER'
+      // libraries: 'places', //// If you need to use place input
+  }
+})
+
 export default {
   name: 'search',
   data () {
     return {
-      msg: 'Suche einen Grill in deiner Nähe'
+      center: {lat: 10.0, lng: 10.0},
+      markers: [{
+        position: {lat: 10.0, lng: 10.0}
+      }, {
+        position: {lat: 11.0, lng: 11.0}
+      }]
     }
   }
 }

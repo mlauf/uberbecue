@@ -10,7 +10,8 @@
     <br>
     <h1 align="center">{{ msg }}</h1>
 
-
+<p><a href="#/test">Test</a></p>
+    
     <h2 align="center">Grillparty und keinen Grill? Dann miete ganz einfach einen!</h2>
 
     <button type="button" class="btn btn-primary"><a href="#/search">Jetzt einen Grill suchen</a></button>

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
     <router-view></router-view>
   </div>
 </template>

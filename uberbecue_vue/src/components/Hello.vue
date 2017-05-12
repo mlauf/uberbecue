@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Grillparty un keinen Grill? Dann miete ganz einfach einen!</h2>
+    <h2>Grillparty und keinen Grill? Dann miete ganz einfach einen!</h2>
       <img src="../assets/logo.png">
 
 <p><a href="#/search">Jetzt einen Grill suchen</a></p>

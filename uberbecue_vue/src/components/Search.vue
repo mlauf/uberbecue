@@ -1,24 +1,18 @@
 <template>
-  <div class="hello">
+  <div class="search">
     <h1>{{ msg }}</h1>
-    <h2>Grillparty un keinen Grill? Dann miete ganz einfach einen!</h2>
-      <img src="../assets/logo.png">
 
-<p>
 
-  <a href="#/search">Jetzt einen Grill suchen</a></p>
 
   </div>
-
-
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'search',
   data () {
     return {
-      msg: 'Welcome to Uberbecue'
+      msg: 'Suche einen Grill in deiner Nähe'
     }
   }
 }

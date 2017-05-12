@@ -40,8 +40,12 @@ button {
   margin-top: 500px;
   padding: 12px 60px;
   font-size: 18px;
+  width: 300px;
 }
+button:hover {
+  background-color: #92252d;
 
+}
 #barbecue {
   width: 100%;
 }
@@ -51,7 +55,10 @@ button {
   margin-right: 50px;
   margin-top: -130px;
 }
-
+a:hover {
+  color: white;
+  text-decoration: none;
+}
 h1, h2 {
   font-weight: normal;
   color: white;
@@ -86,6 +93,7 @@ li a:hover {
 
 a {
   color: white;
+
 }
 div.hello{
   background-image: url(../assets/bannerrr.jpg);

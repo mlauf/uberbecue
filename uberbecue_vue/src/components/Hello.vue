@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="Hello">
     <h1>{{ msg }}</h1>
     <h2>Grillparty und keinen Grill? Dann miete ganz einfach einen!</h2>
       <img src="../assets/logo.png">

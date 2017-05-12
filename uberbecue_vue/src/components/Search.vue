@@ -1,25 +1,36 @@
 <template>
-  <div class="search">
+  <div class="Search">
     <h1>{{ msg }}</h1>
 
-    <iframe
-      width="600"
-      height="450"
-      frameborder="0" style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAlnE5uigVpDUkIlBcLVd9glDW67JYdktc
-        &q=Space+Needle,Seattle+WA" allowfullscreen>
-    </iframe>
+    <map
+      :center="{lat:10, lng:10}"
+      :map-type-id="terrain"
+      :zoom="7"
+    ></map>
+
 
 
   </div>
 </template>
 
 <script>
+import {load, Map, Marker} from 'vue-google-maps'
+load('YOUR_API_TOKEN', 'OPTIONAL VERSION NUMBER')
 export default {
   name: 'search',
   data () {
     return {
-      msg: 'Suche einen Grill in deiner Nähe'
+      msg: 'Suche einen Grill in deiner Nähe',
+      center: {lat: 10.0, lng: 10.0},
+      markers: [{
+        position: {lat: 10.0, lng: 10.0}
+      }, {
+        position: {lat: 11.0, lng: 11.0}
+      }]
+    }
+  },
+  methods: {
+    myMap: function () {
     }
   }
 }

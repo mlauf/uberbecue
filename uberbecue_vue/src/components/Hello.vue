@@ -6,6 +6,7 @@
 
 <p><a href="#/search">Jetzt einen Grill suchen</a></p>
 <p><a href="#/create">Einen Grill verleihen</a></p>
+<p><a href="#/test">Test</a></p>
 
   </div>
 

@@ -2,35 +2,45 @@
   <div class="Search">
     <h1>{{ msg }}</h1>
 
-    <map
-      :center="{lat:10, lng:10}"
-      :map-type-id="terrain"
-      :zoom="7"
-    ></map>
+    <gmap-map
+        :center="center"
+        :zoom="7"
+        style="width: 500px; height: 300px"
+      >
+        <gmap-marker
+          v-for="m in markers"
+          :position="m.position"
+          :clickable="true"
+          :draggable="true"
+          @click="center=m.position"
+        ></gmap-marker>
+      </gmap-map>
 
-
-
-  </div>
+      </div>
 </template>
 
 <script>
-import {load, Map, Marker} from 'vue-google-maps'
-load('YOUR_API_TOKEN', 'OPTIONAL VERSION NUMBER')
+import * as VueGoogleMaps from 'vue2-google-maps'
+import Vue from 'vue'
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyBPq2g_BDqHWgQi4aBW240pQ_rT6RE0b4Q',
+    v: 'OPTIONAL VERSION NUMBER'
+      // libraries: 'places', //// If you need to use place input
+  }
+})
+
 export default {
   name: 'search',
   data () {
     return {
-      msg: 'Suche einen Grill in deiner Nähe',
       center: {lat: 10.0, lng: 10.0},
       markers: [{
         position: {lat: 10.0, lng: 10.0}
       }, {
         position: {lat: 11.0, lng: 11.0}
       }]
-    }
-  },
-  methods: {
-    myMap: function () {
     }
   }
 }
